@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOVIEFLIX PROJECT - Search</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+   <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.svg" alt="MOVIEFLIX logo">
+      </a>
+
+      <div class="header-actions">
+
+    <a href="./search.html" class="search-btn">
+       <ion-icon name="search-outline"></ion-icon>
+    </a>
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
+          <select name="language" id="language">
+            <option value="en">EN</option>
+            <option value="ar">AR</option>
+          </select>
+        </div>
+
+        <div class="user-menu">
+  <a href="#" id="sign-in-btn" class="btn btn-primary">Sign In</a>
+</div>
+                
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="MOVIEFLIX logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="moviedashboard.html" class="navbar-link">Dashboard</a>
+          </li>
+
+          <li>
+            <a href="Pricing.html" class="navbar-link">Pricing</a>
+          </li>
+
+          <li>
+            <a href="contactus.html" class="navbar-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="FAQ.html" class="navbar-link">FAQ</a>
+          </li>
+
+        </ul>
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="library-hero">
+    <div class="container">
+      <h1 class="h1 section-title">Explore Our Portal</h1>
+      <p class="section-subtitle">Find your favorite movies, TV shows, and more</p>
+
+      <div class="search-filters">
+        <div class="search-input">
+          <input type="text" placeholder="Search for a title">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+
+        <div class="filter-dropdown">
+          <select>
+            <option value="Select Year" selected disabled>Select Year</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2013">2013</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="1997">2004</option>
+            <option value="1997">1997</option>
+
+          </select>
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+
+        <div class="filter-dropdown">
+          <select>
+            <option value="Select Genre" selected disabled>Select Genre</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Horror">Horror</option>
+          </select>
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming">
+    <div class="container">
+      <div class="flex-wrapper"></div>
+
+      <ul class="movies-list has-scrollbar">
+
+        <li>
+          <div class="movie-card">
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/search1.png" alt="Titanic">
+              </figure>
+            </a>
+
+            <div class="title-wrapper">
+              <a href="./movie-details.html">
+                <h3 class="card-title">Titanic</h3>
+              </a>
+              <time datetime="1997">1997</time>
+            </div>
+
+            <div class="card-meta">
+              <div class="badge badge-outline">HD</div>
+              <div class="genre-tags"><span class="genre-tag">Drama</span></div>
+              <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT137M">137 min</time></div>
+              <div class="rating"><ion-icon name="star"></ion-icon><data>8.5</data></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="movie-card">
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/search2.png" alt="">
+              </figure>
+            </a>
+
+            <div class="title-wrapper">
+              <a href="./movie-details.html">
+                <h3 class="card-title">Inception</h3>
+              </a>
+              <time datetime="2010">2010</time>
+            </div>
+
+            <div class="card-meta">
+              <div class="badge badge-outline">4K</div>
+              <div class="genre-tags"><span class="genre-tag">Action</span></div>
+              <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT126M">126 min</time></div>
+              <div class="rating"><ion-icon name="star"></ion-icon><data>NR</data></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="movie-card">
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/search3.png" alt="fast&furios">
+              </figure>
+            </a>
+
+            <div class="title-wrapper">
+              <a href="./movie-details.html">
+                <h3 class="card-title">Fast & Furious</h3>
+              </a>
+              <time datetime="2009">2009</time>
+            </div>
+
+            <div class="card-meta">
+              <div class="badge badge-outline">2K</div>
+              <div class="genre-tags"><span class="genre-tag">Action</span></div>
+              <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="">158 min</time></div>
+              <div class="rating"><ion-icon name="star"></ion-icon><data>NR</data></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="movie-card">
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/search4.png" alt="the conjuring">
+              </figure>
+            </a>
+
+            <div class="title-wrapper">
+              <a href="./movie-details.html">
+                <h3 class="card-title">The Conjuring</h3>
+              </a>
+              <time datetime="2013">2013</time>
+            </div>
+
+            <div class="card-meta">
+              <div class="badge badge-outline">HD</div>
+              <div class="genre-tags"><span class="genre-tag">Horror</span></div>
+              <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT107M">107 min</time></div>
+              <div class="rating"><ion-icon name="star"></ion-icon><data>NR</data></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+            <div class="movie-card">
+              <a href="./movie-details.html">
+                <figure class="card-banner">
+                  <img src="./assets/images/search5.png" alt="friends">
+                </figure>
+              </a>
+        
+              <div class="title-wrapper">
+                <a href="./movie-details.html">
+                  <h3 class="card-title">F.R.I.E.N.D.S</h3>
+                </a>
+                <time datetime="2004">2004</time>
+              </div>
+        
+              <div class="card-meta">
+                <div class="badge badge-outline">HD</div>
+                <div class="genre-tags"><span class="genre-tag">Comedy</span></div>
+                <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT137M">235 EP</time></div>
+                <div class="rating"><ion-icon name="star"></ion-icon><data>8.5</data></div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="movie-card">
+              <a href="./movie-details.html">
+                <figure class="card-banner">
+                  <img src="./assets/images/search6.png" alt="stranger Things">
+                </figure>
+              </a>
+        
+              <div class="title-wrapper">
+                <a href="./movie-details.html">
+                  <h3 class="card-title">Stranger Things</h3>
+                </a>
+                <time datetime="2025">2025</time>
+              </div>
+        
+              <div class="card-meta">
+                <div class="badge badge-outline">HD</div>
+                <div class="genre-tags"><span class="genre-tag">Drama</span></div>
+                <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT137M">42 EP</time></div>
+                <div class="rating"><ion-icon name="star"></ion-icon><data>8.5</data></div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="movie-card">
+              <a href="./movie-details.html">
+                <figure class="card-banner">
+                  <img src="./assets/images/search7.png" alt="">
+                </figure>
+              </a>
+        
+              <div class="title-wrapper">
+                <a href="./movie-details.html">
+                  <h3 class="card-title">Breaking Bad</h3>
+                </a>
+                <time datetime="2013">2013</time>
+              </div>
+        
+              <div class="card-meta">
+                <div class="badge badge-outline">HD</div>
+                <div class="genre-tags"><span class="genre-tag">Action</span></div>
+                <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT137M">62 EP</time></div>
+                <div class="rating"><ion-icon name="star"></ion-icon><data>8.5</data></div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="movie-card">
+              <a href="./movie-details.html">
+                <figure class="card-banner">
+                  <img src="./assets/images/search8.png" alt="thequeen'sgambit">
+                </figure>
+              </a>
+        
+              <div class="title-wrapper">
+                <a href="./movie-details.html">
+                  <h3 class="card-title">The Queen's Gambit</h3>
+                </a>
+                <time datetime="2020">2020</time>
+              </div>
+        
+              <div class="card-meta">
+                <div class="badge badge-outline">HD</div>
+                <div class="genre-tags"><span class="genre-tag">Comedy</span></div>
+                <div class="duration"><ion-icon name="time-outline"></ion-icon><time datetime="PT137M">7 EP</time></div>
+                <div class="rating"><ion-icon name="star"></ion-icon><data>8.5</data></div>
+              </div>
+            </div>
+          </li>
+
+      </ul>
+    </div>
+  </section>
+  
+   <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="MOVIEFLIX logo">
+          </a>
+
+          <ul class="footer-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="moviedashboard.html" class="navbar-link">Dashboard</a>
+          </li>
+
+          <li>
+            <a href="Pricing.html" class="navbar-link">Pricing</a>
+          </li>
+
+          <li>
+            <a href="contactus.html" class="navbar-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="FAQ.html" class="navbar-link">FAQ</a>
+          </li>
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper">
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </footer>
+  <!-- GO TO TOP -->
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
